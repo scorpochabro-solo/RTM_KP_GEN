@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTM KP GEN</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">RT.MERCH / GITHUB PAGES EDITION</p>
+                <h1>ГЕНЕРАТОР<br>КП</h1>
+            </div>
+            <div class="meta-info">
+                CLIENT-SIDE PDF<br>
+                EST. 2026<br>
+            </div>
+        </header>
+
+        <section class="banner">
+            <p>
+                Эта версия работает без сервера: PDF собирается прямо в браузере и сразу скачивается.
+            </p>
+        </section>
+
+        <form id="proposal-form" class="proposal-form">
+            <div class="section-grid">
+                <div class="section-label">01 // КЛИЕНТ</div>
+                <div class="section-content">
+                    <div class="input-group">
+                        <label class="field-label" for="company-name">Название компании</label>
+                        <input
+                            id="company-name"
+                            type="text"
+                            name="company_name"
+                            placeholder="ВВЕДИТЕ НАЗВАНИЕ"
+                            required
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-grid">
+                <div class="section-label">02 // НАСТРОЙКИ</div>
+                <div class="section-content">
+                    <div class="input-group">
+                        <label class="field-label" for="items-count-select">Количество позиций</label>
+                        <select id="items-count-select" name="items_count">
+                            <option value="1">1 ТОВАР</option>
+                            <option value="2">2 ТОВАРА</option>
+                            <option value="3">3 ТОВАРА</option>
+                            <option value="4">4 ТОВАРА</option>
+                            <option value="5">5 ТОВАРОВ</option>
+                            <option value="6">6 ТОВАРОВ</option>
+                            <option value="7">7 ТОВАРОВ</option>
+                            <option value="8">8 ТОВАРОВ</option>
+                            <option value="9">9 ТОВАРОВ</option>
+                            <option value="10">10 ТОВАРОВ</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-grid no-border">
+                <div class="section-label">03 // ТОВАРЫ</div>
+                <div class="section-content section-content-padded">
+                    <div id="items-container"></div>
+                </div>
+            </div>
+
+            <div class="submit-panel">
+                <div id="status" class="status" aria-live="polite"></div>
+                <button id="submit-button" type="submit" class="btn-submit">
+                    СГЕНЕРИРОВАТЬ PDF
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./assets/vendor/pdf-lib.min.js"></script>
+    <script src="./assets/vendor/fontkit.umd.min.js"></script>
+    <script type="module" src="./assets/app.js"></script>
+</body>
+</html>
