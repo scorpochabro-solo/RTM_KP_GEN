@@ -5,7 +5,7 @@
 Что внутри:
 - интерфейс живет в `docs/`
 - PDF собирается прямо в браузере, без Flask и VPS
-- публикация на Pages настроена через `.github/workflows/deploy-pages.yml`
+- для публикации используй стандартный режим GitHub Pages: ветка `main`, папка `/docs`
 
 Локальный запуск:
 
@@ -14,4 +14,10 @@ cd docs
 python3 -m http.server 8000
 ```
 
-После пуша в `main` GitHub Actions публикует содержимое `docs/` в Pages.
+После пуша в `main` включи GitHub Pages в настройках репозитория:
+
+1. `Settings`
+2. `Pages`
+3. `Source` → `Deploy from a branch`
+4. `Branch` → `main`
+5. `Folder` → `/docs`
